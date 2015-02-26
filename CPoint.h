@@ -8,6 +8,9 @@ namespace kuro {
         CPoint(const CPoint & point);
         CPoint();
         
+        CPoint  operator *(int factor) const;
+        CPoint& operator *=(int factor);
+
         int x;
         int y;
     };
