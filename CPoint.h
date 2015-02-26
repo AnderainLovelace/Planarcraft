@@ -10,6 +10,8 @@ namespace kuro {
         
         CPoint  operator *(int factor) const;
         CPoint& operator *=(int factor);
+        CPoint  operator /(int factor) const;
+        CPoint& operator /=(int factor);
 
         int x;
         int y;
