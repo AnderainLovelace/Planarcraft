@@ -12,6 +12,7 @@ namespace kuro {
     CPoint& CPoint::operator *=(int factor) {
         x *= factor;
         y *= factor;
+        return *this;
     }
     CPoint  CPoint::operator /(int factor) const {
         return CPoint(x / factor, y / factor);
@@ -19,5 +20,6 @@ namespace kuro {
     CPoint& CPoint::operator /=(int factor) {
         x /= factor;
         y /= factor;
+        return *this;
     }
 }
