@@ -3,7 +3,7 @@
 #include "CMaterialPackage.h"
 #include "CError.h"
 
-#define LOCAL_PATH      "material/"
+#define LOCAL_PATH      "../material/"
 #define PACKAGE_NAME    "package.tar"
 
 namespace kuro {

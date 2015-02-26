@@ -104,4 +104,10 @@ namespace kuro {
         }
         return false;
     }
+
+    CInput::Mouse CInput::getMouse() {
+        int x, y, button;
+        button = SDL_GetMouseState(&x, &y);
+        return Mouse(x, y, button);
+    }
 }

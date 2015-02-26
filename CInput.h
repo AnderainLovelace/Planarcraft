@@ -17,6 +17,9 @@ namespace kuro {
             Circle, Cross, Square, Triangle,
             LTrigger1, LTrigger2, RTrigger1, RTrigger2
         };
+        enum MouseStatus {
+            None = 0, Left = 1, Mid = 2, Right = 4
+        };
 
         CInput();
 
@@ -26,6 +29,13 @@ namespace kuro {
         bool repeat(Key key);
         bool quitFlag() { return _quitFlag; }
         void update();
+
+        struct Mouse {
+            int x, y, button;
+            Mouse(int _x, int _y, int _button) : x(_x), y(_y), button(_button){}
+        };
+
+        static Mouse getMouse();
 
     protected:
         struct KeyTable {
